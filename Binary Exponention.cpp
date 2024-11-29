@@ -16,9 +16,24 @@ ll binaryExponen(ll a,ll b)
         return res*res;
     }
 }
+
+ll binaryExponenIter(ll a,ll b)
+{
+    ll ans =1;
+    while(b)
+    {
+        if(b&1)
+        {
+            ans*=a;
+        }
+        a*=a;
+        b >>=1;
+    }
+    return ans;
+}
 int main()
 {
-    p(binaryExponen(2,13))
+    p(binaryExponenIter(2,13))
 
 
     return 0;
