@@ -1,5 +1,18 @@
-# Basic-coding-problems
+# Basic Coding Problems
 
-Here I've shared some basic coding problems in mostly c++, some of them in c or java or maybe other, problems like, fibonacchi series calculation, making in-built libraries, popular dsa problems like valid parenthesis etc!!!. I'll be adding a pdf or doc as an explanation of those solution approaches if needed!!
+Welcome to the **Basic Coding Problems** repository! 
 
-Happy coding!!!
+In this repository, you'll find a collection of basic coding problems primarily solved in **C++**, but you'll also find some solutions in **C**, **Java**, and maybe a few others!
+
+### Problems include:
+- Fibonacci series calculation
+- Implementing in-built libraries
+- Classic data structure problems (e.g., Valid Parentheses, Linked Lists, etc.)
+- And much more!
+
+### What's New?
+I'll be adding PDFs or docs with explanations of solution approaches if necessary, to help you understand the thought process behind solving these problems!
+
+### Happy coding! 🚀
+
+
