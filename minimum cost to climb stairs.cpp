@@ -3,33 +3,25 @@
 #define p(x) cout << x << endl;
 using namespace std;
 
-ll solve(vector<ll> &v, ll n, vector<ll> &dp) {
-    if (n == 0) {
-        return v[0];
-    }
-    if (n == 1) {
-        return v[1];
-    }
-    if (dp[n] != -1) {
-        return dp[n];
-    }
-
-    dp[n] = min(solve(v, n - 1, dp), solve(v, n - 2, dp)) + v[n];
-    return dp[n];
-}
-
-ll mincoststairs(vector<ll> &v) {
-    ll n = v.size();
-    vector<ll> dp(n, -1);
-    return min(solve(v, n - 1, dp), solve(v, n - 2, dp));
-}
-
 int main() {
     ll n;
     cin >> n;
     vector<ll> v(n);
     for (ll i = 0; i < n; i++) cin >> v[i];
-    ll ans = mincoststairs(v);
-    p(ans)
+    
+    if (n == 1) {
+        p(v[0]);
+        return 0;
+    }
+    
+    vector<ll> dp(n);
+    dp[0] = v[0];
+    dp[1] = v[1];
+    for (ll i = 2; i < n; i++) {
+        dp[i] = v[i] + min(dp[i-1], dp[i-2]);
+    }
+    
+    p(min(dp[n-1], dp[n-2]));
+    
     return 0;
 }
